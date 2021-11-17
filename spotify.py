@@ -1,6 +1,5 @@
 import requests, base64, json
 
-
 class Spotify:
 
     def __init__(self, client_id, client_secret, user):
@@ -36,8 +35,6 @@ class Spotify:
         print(" [ TOKEN ] : %s " % token)
         header = self.accessToken(token)
         self.user(header, userIS)
-
-        #
 
     def connect(self, url, headers):
         return requests.get(url=url, headers=headers)
