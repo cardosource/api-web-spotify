@@ -75,7 +75,7 @@ class Spotify:
             print("+. followers :", followers['total'])
             print(":==> Genere : ")
 
-            for i in i['genres']:
+            for i in i['genere']:
                 print("*. ", i)
 
         def album(acesso):
