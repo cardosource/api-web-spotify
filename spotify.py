@@ -16,7 +16,6 @@ class Spotify:
     def accessToken(self, token):
         return {'Authorization': 'Bearer ' + token}
 
-    # appears_on
     def encode(self, client_id, client_secret):
         to_encode = client_id + ':' + client_secret
         return base64.b64encode(to_encode.encode()).decode()
