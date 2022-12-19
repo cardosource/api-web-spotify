@@ -2,8 +2,8 @@ Based on simple REST principles, the Spotify Web API endpoints return JSON metad
  
 ![](https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=")
  
- 
-fonte: https://developer.spotify.com/documentation/web-api/
+ [developer.spotify.com](https://developer.spotify.com/documentation/web-api/)
+
 
 
 
