@@ -1,5 +1,11 @@
 import requests, base64, json
 
+class Singleton(object):
+    instancia= None
+    def __new__(cls):
+        
+    
+    
 class Spotify:
 
     def __init__(self, client_id, client_secret, user):
