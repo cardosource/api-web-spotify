@@ -3,6 +3,7 @@ import requests, base64, json
 class Singleton(object):
     instancia= None
     def __new__(cls):
+        if not isinstance(cls.instancia, cls):
         
     
     
