@@ -1,20 +1,21 @@
-import requests, base64, json
+import json
+import requests
+import base64
 
-class Singleton(object):
-    instancia= None
-    def __new__(cls):
-        if not isinstance(cls.instancia, cls):
-             cls.instancia = object.__new__(cls)
-        
-    
-    
 class Spotify:
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
 
     def __init__(self, client_id, client_secret, user):
-        self.client_id = client_id
-        self.client_secret = client_secret
-        self.login(client_id, client_secret, user)
-        self.user = user
+        if not hasattr(self, 'client_id'):
+            self.client_id = client_id
+            self.client_secret = client_secret
+            self.login(client_id, client_secret, user)
+            self.user = user
 
     def authorizationBasic(self, sec):
         headers = {'Content-Type': 'application/x-www-form-urlencoded',
@@ -49,7 +50,7 @@ class Spotify:
     def status(self, carg, art):
         if carg == 200:
             print("[ --> badabim <-- ]")
-            return json.loads(art.text)
+            return json.loads    (art.text)
         elif carg == 400:
             print("Ohhh not")
             return json.loads(art.text)
@@ -65,6 +66,10 @@ class Spotify:
         self.search(acess)
 
     def search(self, acess):
+
+        my_pref = "rammstein" #<:------------------------- pesquisa
+        my_music = self.connect("https://api.spotify.com/v1/search?q=" + my_pref + "&type=artist", headers=acess)
+        def search(self, acess):
 
         my_pref = "rammstein" #<:------------------------- pesquisa
         my_music = self.connect("https://api.spotify.com/v1/search?q=" + my_pref + "&type=artist", headers=acess)
@@ -99,10 +104,14 @@ class Spotify:
 
         album(acesso=acess)
 
+class SpotifySingleton(Spotify):
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if not cls._instance:
+            cls._instance = super().__new__(cls, *args, **kwargs)
+        return cls._instance
 
 client_id = ""
 client_secret = ""
 user = ""
-
-if __name__ == '__main__':
-    Spotify(client_id, client_secret, user)
