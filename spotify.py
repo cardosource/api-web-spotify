@@ -67,9 +67,7 @@ class Spotify:
 
     def search(self, acess):
 
-        my_pref = "rammstein" #<:------------------------- pesquisa
-        my_music = self.connect("https://api.spotify.com/v1/search?q=" + my_pref + "&type=artist", headers=acess)
-        def search(self, acess):
+       
 
         my_pref = "rammstein" #<:------------------------- pesquisa
         my_music = self.connect("https://api.spotify.com/v1/search?q=" + my_pref + "&type=artist", headers=acess)
