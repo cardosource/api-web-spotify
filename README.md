@@ -12,6 +12,9 @@ Para utilizar o código, é necessário ter uma conta no Spotify e criar as cred
  - obter informações sobre o usuário, como suas playlists e músicas favoritas
  
  
+ É possível utilizar o código como base para criar aplicativos ou scripts personalizados que interajam com a plataforma Spotify.
+ 
+ 
  
  
  
