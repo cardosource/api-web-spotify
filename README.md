@@ -20,8 +20,7 @@ Para utilizar o código, é necessário ter uma conta no Spotify e criar as cred
  
  
  
-![](https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=")
- 
+![GitHub](https://img.shields.io/badge/python-3.+-blue)
 
 
 
